@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="layout.MainPage">
+
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <!--tlo-->
+        <Image Source="HeaderBackground.png" Aspect="AspectFill"/>
+        <Image Source="CurvedMask.png" VerticalOptions="End" Aspect="Fill"/>
+        <!--informacje pod zdjeciem-->
+        <BoxView Grid.Row="1" HeightRequest="100"/>
+        <Label Text="Patrycja" Style="{StaticResource pogrubienie}" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1" TranslationY="10" FontSize="20"/>
+        <Label Text="Lorem Impsum" Style="{StaticResource tekst_jasn}" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1" TranslationY="30" FontSize="13"/>
+        <!--polubienia-->
+        <BoxView Grid.Row="2"/>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Text="33" VerticalOptions="Center" HorizontalOptions="Center" />
+            <Label Text="Likes" Style="{StaticResource tekst_jasn}"  VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1"/>
+            <Label Text="94" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" />
+            <Label Text="Following" Style="{StaticResource tekst_jasn}"  VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1" Grid.Column="1"/>
+            <Label Text="957" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="2"/>
+            <Label Text="Followers" Style="{StaticResource tekst_jasn}" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1" Grid.Column="2"/>
+        </Grid>
+        <!--krotki opis mnie-->
+        <BoxView  Grid.Row="3"/>
+        <Label Style="{StaticResource tekst_jasn}" Padding="20" Grid.Row="3" HorizontalOptions="Center"  Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+               />
+        <!--follow-->
+        <BoxView Grid.Row="4"/>
+        <!--zdj profilowe-->
+        <Image Source="profile.jpg" VerticalOptions="End" HorizontalOptions="Center" HeightRequest="100" WidthRequest="100" TranslationY="50" />
+        <Button Style="{StaticResource button}" Grid.Row="4" Text="Follow"/>
+
+
+
+
+
+
+
+
+
+    </Grid>
+</ContentPage>
